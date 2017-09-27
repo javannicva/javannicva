@@ -24,7 +24,25 @@
 <body>
     
     
-     <div id="countup" style="text-align: center">
+    
+
+    <div class="container happy">
+    <div id="giphyme">
+    </div>
+<!--         <div class="video-background">
+            <div class="video-foreground">
+            <iframe src="https://www.youtube.com/embed/JQCP85FngzE?t=10s&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div> -->
+
+
+        <div class="slideshow">
+            <canvas width="1" height="1" id="container" style="position:absolute"></canvas>
+            <!-- Heavy Rain -->
+            <div class="slide" id="slide-1" data-weather="rain">
+                <div class="slide__element slide__element--temp">Malheureusement NON</div>
+                
+                 <div id="countup" style="text-align: center">
             depuis déjà
               <p id="days">00</p>
               <p class="timeRefDays">jours</p>
@@ -58,22 +76,6 @@
               upTime.to=setTimeout(function(){ upTime(countTo); },1000);
             }
       </script>
-
-    <div class="container happy">
-    <div id="giphyme">
-    </div>
-<!--         <div class="video-background">
-            <div class="video-foreground">
-            <iframe src="https://www.youtube.com/embed/JQCP85FngzE?t=10s&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div> -->
-
-
-        <div class="slideshow">
-            <canvas width="1" height="1" id="container" style="position:absolute"></canvas>
-            <!-- Heavy Rain -->
-            <div class="slide" id="slide-1" data-weather="rain">
-                <div class="slide__element slide__element--temp">Malheureusement NON</div>
                
                 <!-- <div class="slide__element slide__element--date">
                 <span id="days"></span>
@@ -82,6 +84,8 @@
 
             </div>
         </div>
+        
+        
 
         <nav class="nav">
             <a href="https://tutesdjadef.com" target="_blank">CQ Tech</a>
