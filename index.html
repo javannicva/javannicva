@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>#hnnggg!</title>
+    <title>Kirk-a-t-il-bang</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="site.min.css" />
     <script>
@@ -22,6 +22,43 @@
 </head>
 
 <body>
+    
+    
+     <div id="countup" style="text-align: center">
+            
+             Ainsi, depuis
+              <p id="days">00</p>
+              <p class="timeRefDays">jours</p>
+              <p id="hours">00</p>
+              <p class="timeRefHours">heures</p>
+              <p id="minutes">00</p>
+              <p class="timeRefMinutes">minutes et</p>
+              <p id="seconds">00</p>
+              <p class="timeRefSeconds">secondes</p>
+            kirk <strong>N'A PAS</strong> bang
+            </div>
+      
+       <script language="JavaScript">  
+            window.onload=function() {
+              // Month,Day,Year,Hour,Minute,Second
+              upTime('sep,03,2017,00:11:00'); // ****** Change this line!
+            }
+            function upTime(countTo) {
+              now = new Date();
+              countTo = new Date(countTo);
+              difference = (now-countTo);
+              days=Math.floor(difference/(60*60*1000*24)*1);
+              hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
+              mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
+              secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
+              document.getElementById('days').firstChild.nodeValue = days;
+              document.getElementById('hours').firstChild.nodeValue = hours;
+              document.getElementById('minutes').firstChild.nodeValue = mins;
+              document.getElementById('seconds').firstChild.nodeValue = secs;
+              clearTimeout(upTime.to);
+              upTime.to=setTimeout(function(){ upTime(countTo); },1000);
+            }
+      </script>
 
     <div class="container happy">
     <div id="giphyme">
@@ -38,61 +75,7 @@
             <!-- Heavy Rain -->
             <div class="slide" id="slide-1" data-weather="rain">
                 <div class="slide__element slide__element--temp">Pas encore malheureusement</div>
-                <div class="slide__element slide__element--temp">
-                                                     <div id="countup" style="text-align: center">
-
-                                             Ainsi, depuis
-                                              <p id="days">00</p>
-                                              <p class="timeRefDays">jours</p>
-                                              <p id="hours">00</p>
-                                              <p class="timeRefHours">heures</p>
-                                              <p id="minutes">00</p>
-                                              <p class="timeRefMinutes">minutes et</p>
-                                              <p id="seconds">00</p>
-                                              <p class="timeRefSeconds">secondes</p>
-                                            kirk <strong>N'A PAS</strong> bang
-                                            </div>
-
-                                       <script language="JavaScript">  
-                                            window.onload=function() {
-                                              // Month,Day,Year,Hour,Minute,Second
-                                              upTime('sep,03,2017,00:11:00'); // ****** Change this line!
-                                            }
-                                            function upTime(countTo) {
-                                              now = new Date();
-                                              countTo = new Date(countTo);
-                                              difference = (now-countTo);
-                                              days=Math.floor(difference/(60*60*1000*24)*1);
-                                              hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
-                                              mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
-                                              secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
-                                              document.getElementById('days').firstChild.nodeValue = days;
-                                              document.getElementById('hours').firstChild.nodeValue = hours;
-                                              document.getElementById('minutes').firstChild.nodeValue = mins;
-                                              document.getElementById('seconds').firstChild.nodeValue = secs;
-                                              clearTimeout(upTime.to);
-                                              upTime.to=setTimeout(function(){ upTime(countTo); },1000);
-                                            }
-                                      </script>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                </div>
+               
                 <!-- <div class="slide__element slide__element--date">
                 <span id="days"></span>
                     days till stardew valley!
